@@ -14,34 +14,42 @@ function getIncome(income) {
     incomeField.value = '';
     return incomeValue;
 }
+function updateExpenses() {
+    const totalExpenses = getExpenses('food', 'rent', 'clothes');
+    if (totalExpenses > 0) {
+        const expensesElement = document.getElementById('total-expenses');
+        expensesElement.innerText = totalExpenses;
+        return totalExpenses;
+    }
+    else {
+        // give error massage
+    }
 
-function expensesUpdate() {
-    const totalMontlyCost = getExpenses('food', 'rent', 'clothes');
-    const totalExpensesElement = document.getElementById('total-expenses');
-    totalExpensesElement.innerText = totalMontlyCost;
-    return totalMontlyCost;
 }
-function balanceUpdate() {
-    const totalIncome = getIncome('total-income');
 
-    const totalMontlyCost = expensesUpdate();
+function updateBalanceAndExpences() {
+    const income = getIncome('total-income');
 
-    const balance = totalIncome - totalMontlyCost;
+    const totalExpenses = updateExpenses();
+
+    const balance = income - totalExpenses;
     const totalBalance = document.getElementById('total-balance');
     totalBalance.innerText = balance;
+    return { income, totalExpenses, balance };
 }
 
 
 document.getElementById('expenses-btn').addEventListener('click', function () {
-    balanceUpdate();
+    updateBalanceAndExpences();
 });
 
 document.getElementById('saving-btn').addEventListener('click', function () {
+    const array = updateBalanceAndExpences();
     const savingPercentageField = document.getElementById('saving-percentage');
     const savingPercentage = parseFloat(savingPercentageField.value);
 
-    const totalIncomeField = document.getElementById('total-income');
-    const totalIncome = parseFloat(totalIncomeField.value);
+
+    const totalIncome = array.income;
 
     const savingAmount = (totalIncome * savingPercentage) / 100;
 
@@ -57,6 +65,6 @@ document.getElementById('saving-btn').addEventListener('click', function () {
     totalRemainingElement.innerText = remainingBalance;
 
 
-    totalIncomeField.value = '';
+
     savingPercentageField.value = '';
 });
