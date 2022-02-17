@@ -10,7 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="w-screen mb-20 2xl:w-full">
+<!-- <body class="w-screen 2xl:w-full bg-zinc-50 mb-20 "> -->
+
+<body class="mb-20 ">
     <!-- Header Start -->
     <header class="my-8 text-5xl text-teal-500 text-center font-bold">
         <h1>Easy Life!</h1>
@@ -18,34 +20,34 @@
     <!-- Main Section -->
     <main class="flex justify-center">
         <!-- Section -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-10 2xl:mx-0">
+        <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-10">
             <!-- Image Area-->
             <div>
-                <img width="700" src="image/1.jpg" alt="" srcset="">
+                <img class="object-cover h-screen" src="image/1.jpg" alt="" srcset="">
             </div>
             <!-- Form Area -->
-            <div class="flex flex-col items-center bg-zinc-100 p-4">
+            <div class="flex flex-col items-center bg-zinc-200 py-4 2xl:py-16">
                 <!-- Income & Expenses Area-->
                 <div class="flex flex-col items-center">
                     <h4 class="text-2xl font-semibold my-3">Income</h4>
                     <div class="font-semibold">
                         <span>Income:</span>
-                        <input class="bg-zinc-200 p-1 rounded" type="text">
+                        <input class="bg-zinc-300 p-1 rounded" type="text">
                     </div>
                     <h4 class="text-2xl font-semibold my-3">Expenses</h4>
                     <div class="font-semibold">
                         <div class="my-2 ml-4">
                             <span>Food:</span>
-                            <input class="bg-zinc-200 p-1 rounded" type="text">
+                            <input class="bg-zinc-300 p-1 rounded" type="text">
                         </div>
 
                         <div class="my-2 ml-5">
                             <span>Rent:</span>
-                            <input class="bg-zinc-200 p-1 rounded" type="text">
+                            <input class="bg-zinc-300 p-1 rounded" type="text">
                         </div>
                         <div class="my-2">
                             <span>Clothes:</span>
-                            <input class="bg-zinc-200 p-1 rounded" type="text">
+                            <input class="bg-zinc-300 p-1 rounded" type="text">
                         </div>
                     </div>
                     <!-- Calculation Button (Income & Expenses)-->
@@ -62,12 +64,12 @@
                     </div>
 
                     <!-- Saving & Remaining Balance Area -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-semibold my-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 font-semibold my-3">
                         <div class="flex items-center">
                             <span>Save:</span>
-                            <input class="bg-zinc-200 w-32 p-1 mx-3.5 rounded" type="text">
+                            <input class="bg-zinc-300 w-32 p-1 mx-3.5 rounded" type="text">
                         </div>
-                        <div class="flex items-center">
+                        <div class="flex items-center ml-6 md:ml-0">
                             <span>%</span>
                             <!-- Save Button (Saving & Remaining)-->
                             <button
