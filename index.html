@@ -8,12 +8,14 @@
     <title>Document</title>
     <!-- Taiwind connection -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- External css  -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="mb-20 max-w-full">
     <!-- Header Start -->
-    <header class="my-8 text-5xl text-teal-500 text-center font-bold">
-        <h1>Easy Life!</h1>
+    <header class="my-8 text-5xl text-blue-500 text-center font-bold">
+        <h1>Smart Money Calculator!</h1>
     </header>
     <!-- Main Section -->
     <main class="flex justify-center">
@@ -30,58 +32,68 @@
                     <h4 class="text-2xl font-semibold my-3 2xl:my-4">Income</h4>
                     <div class="font-semibold">
                         <span>Income:</span>
-                        <input class="bg-zinc-300 p-1 rounded" type="text" placeholder="Enter Income Please !">
+                        <input id="total-income" class="bg-zinc-300 p-1 rounded" type="text"
+                            placeholder="Enter Income Please !">
                     </div>
                     <h4 class="text-2xl font-semibold my-3">Expenses</h4>
                     <div class="font-semibold">
                         <div class="my-2 ml-4 2xl:my-4">
                             <span>Food:</span>
-                            <input class="bg-zinc-300 p-1 rounded" type="text" placeholder="Food Expenses Please !">
+                            <input id="food-expenses" class="bg-zinc-300 p-1 rounded" type="text"
+                                placeholder="Food Expenses Please !">
                         </div>
                         <div class="my-2 ml-5 2xl:my-4">
                             <span>Rent:</span>
-                            <input class="bg-zinc-300 p-1 rounded" type="text" placeholder="Rent Expenses Please !">
+                            <input id="rent-expenses" class="bg-zinc-300 p-1 rounded" type="text"
+                                placeholder="Rent Expenses Please !">
                         </div>
                         <div class="my-2 2xl:my-4">
                             <span>Clothes:</span>
-                            <input class="bg-zinc-300 p-1 rounded" type="text" placeholder="Clothes Expenses Please !">
+                            <input id="clothes-expenses" class="bg-zinc-300 p-1 rounded" type="text"
+                                placeholder="Clothes Expenses Please !">
                         </div>
                     </div>
                     <!-- Calculation Button (Income & Expenses)-->
-                    <button
-                        class="bg-blue-400 text-white font-semibold px-10 py-2 mt-4 mb-2 rounded-md">Calculate</button>
+                    <button id="expenses-btn"
+                        class="bg-blue-500 text-white font-semibold px-10 py-2 mt-4 mb-2 rounded-md">Calculate</button>
                     <!-- Error Massages (Income & Expenses)-->
-                    <!--  <div class="my-4">
-                        <p class="notify">❌ Pin Didn't Match, Please try again</p>
-                    </div> -->
+                    <div>
+                        <p id="type-error-expences" class="notify p-4 text-center">&#128519; Please Don't Insert String
+                            Typed Value & Negative Typed Value! &#128519;</p>
+                        <p id="over-cost-expences" class="notify p-4 text-center">Sorry, Your Expenses Are
+                            More Than Your Income !&#128549;</p>
+                    </div>
                     <!-- Calculation Results (Income & Expenses)-->
                     <div class="text-2xl text-center font-semibold">
-                        <h4 class="my-2.5">Total Expenses: <span>5500</span></h4>
-                        <h4 class="my-2.5">Balance: <span>4500</span></h4>
+                        <h4 class="my-2.5">Total Expenses: <span id="total-expenses">00</span></h4>
+                        <h4 class="my-2.5">Balance: <span id="total-balance">00</span></h4>
                     </div>
 
                     <!-- Saving & Remaining Balance Area -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 font-semibold my-3">
                         <div class="flex items-center">
                             <span>Save:</span>
-                            <input class="bg-zinc-300 w-32 p-1 mx-3.5 rounded" type="text"
+                            <input id="saving-percentage" class="bg-zinc-300 w-32 p-1 mx-3.5 rounded" type="text"
                                 placeholder="Saving Please !">
                         </div>
                         <div class="flex items-center ml-6 md:ml-0">
                             <span>%</span>
                             <!-- Save Button (Saving & Remaining)-->
-                            <button
-                                class="bg-blue-400 text-white font-semibold w-32 p-1 mx-3.5 rounded-md">Save</button>
+                            <button id="saving-btn"
+                                class="bg-blue-500 text-white font-semibold w-32 p-1 mx-3.5 rounded-md">Save</button>
                         </div>
                     </div>
                     <!-- Error Massages (Saving & Remaining)-->
-                    <!-- <div class="my-4">
-                        <p class="notify">❌ Pin Didn't Match, Please try again</p>
-                    </div> -->
+                    <div>
+                        <p id="type-error-saving" class="notify p-4 text-center">&#128519; Please Don't Insert String
+                            Typed Value & Negative Typed Value! &#128519;</p>
+                        <p id="over-cost-saving" class="notify p-4 text-center">Sorry, You Have No Enough Balance For
+                            Saving!&#128549;</p>
+                    </div>
                     <!-- Calculation Results (Saving & Remaining)-->
                     <div class="text-2xl text-center font-semibold">
-                        <h4 class="my-2">Saving Amount: <span>2000</span></h4>
-                        <h4 class="my-2">Remaining Balance: <span>2500</span></h4>
+                        <h4 class="my-2">Saving Amount: <span id="total-saving">00</span></h4>
+                        <h4 class="my-2">Remaining Balance: <span id="total-remaining">00</span></h4>
                     </div>
                 </div>
             </div>
@@ -89,6 +101,8 @@
     </main>
     <footer>
     </footer>
+    <!-- External js  -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
