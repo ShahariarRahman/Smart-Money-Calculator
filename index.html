@@ -10,60 +10,67 @@
 </head>
 
 <body>
-    <header class="text-7xl font-bold text-sky-500 text-center my-10">
-        <h1>Easy Life</h1>
+    <!-- Header Start -->
+    <header class="my-8 text-5xl text-teal-500 text-center font-bold">
+        <h1>Easy Life!</h1>
     </header>
-    <main class="grid sm:grid-cols-2 grid-cols-1 gap-4 mx-16">
-        <section>
+    <!-- Main Section -->
+    <main class="flex justify-center">
+        <!-- Section -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-20">
+            <!-- Image -->
             <div>
-                <img src="image/img-1.jpg" alt="" srcset="">
+                <img width="700" src="image/1.jpg" alt="" srcset="">
             </div>
-        </section>
-        <section class="bg-slate-100 flex flex-col items-center">
-            <div class="my-8 flex flex-col items-center">
-                <h4 class="text-4xl font-bold my-8 text-center">Income</h4>
-                <div class="text-3xl font-semibold">
-                    <span class="text-right">Income:</span>
-                    <input class="p-3.5 bg-slate-200 rounded" type="text">
-                </div>
-                <h4 class="text-4xl font-bold text-center my-8">Expences</h4>
-                <div class="text-3xl font-semibold my-6 ml-8">
-                    <span class="text-right">Food:</span>
-                    <input class="p-3.5 bg-slate-200 rounded" type="text">
-                </div>
+            <!-- Calculation Area -->
+            <div class="flex flex-col items-center bg-zinc-100">
+                <div class="flex flex-col items-center mt-8">
+                    <h4 class="text-2xl font-semibold my-3">Income</h4>
+                    <div class="font-semibold">
+                        <span>Income:</span>
+                        <input class="bg-zinc-200 p-1 rounded" type="text">
+                    </div>
+                    <h4 class="text-2xl font-semibold text-center my-3">Expences</h4>
+                    <div class="text-1xl font-semibold my-2 ml-4">
+                        <span class="text-right">Food:</span>
+                        <input class="p-1 bg-zinc-200 rounded" type="text">
+                    </div>
 
-                <div class="text-3xl font-semibold my-6 ml-10">
-                    <span class="text-right">Rent:</span>
-                    <input class="p-3.5 bg-slate-200 rounded" type="text">
-                </div>
-                <div class="text-3xl font-semibold my-6">
-                    <span class="text-right">Clothes:</span>
-                    <input class="p-3.5 bg-slate-200 rounded" type="text">
-                </div>
-                <button class="text-white bg-sky-400 px-20 py-4 text-3xl font-bold my-6 rounded">Calculate</button>
-                <h4 class="text-4xl font-bold my-8 text-center">Total Expenses: <span>5500</span></h4>
-                <h4 class="text-4xl font-bold my-8 text-center">Balance: <span>4500</span></h4>
-                <div class="grid grid-cols-2 ">
-                    <div class="text-3xl font-semibold my-6 flex items-center">
-                        <span>Save:</span>
-                        <input class="p-3.5 bg-slate-200 rounded w-40 mx-6" type="text">
+                    <div class="text-1xl font-semibold my-2 ml-5">
+                        <span class="text-right">Rent:</span>
+                        <input class="p-1 bg-zinc-200 rounded" type="text">
                     </div>
-                    <div class="text-3xl font-semibold my-6 flex items-center">
-                        <span>%</span>
-                        <button
-                            class="text-white bg-sky-400 p-3.5 bg-slate-200 rounded w-48 mx-6 font-bold">Save</button>
+                    <div class="text-1xl font-semibold my-2">
+                        <span class="text-right">Clothes:</span>
+                        <input class="p-1 bg-zinc-200 rounded" type="text">
                     </div>
+                    <button
+                        class="text-white bg-blue-400 px-10 py-2 text-1xl font-semibold mt-4 mb-2  rounded-md">Calculate</button>
+                    <div class="my-4">
+                        <p class="notify">❌ Pin Didn't Match, Please try again</p>
+                    </div>
+                    <h4 class="text-2xl font-semibold my-2.5 text-center">Total Expenses: <span>5500</span></h4>
+                    <h4 class="text-2xl font-semibold my-2.5 text-center">Balance: <span>4500</span></h4>
+                    <div class="grid grid-cols-2 ">
+                        <div class="text-1xl font-semibold my-2 flex items-center">
+                            <span>Save:</span>
+                            <input class="p-1 bg-zinc-200 rounded w-32 mx-3.5" type="text">
+                        </div>
+                        <div class="text-1xl font-semibold my-3 flex items-center">
+                            <span>%</span>
+                            <button class="text-white bg-blue-400 p-1 rounded w-32 mx-3.5 font-semibold">Save</button>
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <p class="notify">❌ Pin Didn't Match, Please try again</p>
+                    </div>
+                    <h4 class="text-2xl font-semibold my-2 text-center">Saving Amount: <span>2000</span></h4>
+                    <h4 class="text-2xl font-semibold my-2 text-center">Remaining Balance: <span>2500</span></h4>
                 </div>
-                <h4 class="text-4xl font-bold my-8 text-center">Saving Amount: <span>2000</span></h4>
-                <h4 class="text-4xl font-bold my-8 text-center">Remaining Balance: <span>2500</span></h4>
             </div>
-
-
-
         </section>
     </main>
     <footer>
-
     </footer>
 </body>
 
