@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Taiwind connection -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="w-screen mb-20 2xl:w-full">
     <!-- Header Start -->
     <header class="my-8 text-5xl text-teal-500 text-center font-bold">
         <h1>Easy Life!</h1>
@@ -17,55 +18,72 @@
     <!-- Main Section -->
     <main class="flex justify-center">
         <!-- Section -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-20">
-            <!-- Image -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-10 2xl:mx-0">
+            <!-- Image Area-->
             <div>
                 <img width="700" src="image/1.jpg" alt="" srcset="">
             </div>
-            <!-- Calculation Area -->
-            <div class="flex flex-col items-center bg-zinc-100">
-                <div class="flex flex-col items-center mt-8">
+            <!-- Form Area -->
+            <div class="flex flex-col items-center bg-zinc-100 p-4">
+                <!-- Income & Expenses Area-->
+                <div class="flex flex-col items-center">
                     <h4 class="text-2xl font-semibold my-3">Income</h4>
                     <div class="font-semibold">
                         <span>Income:</span>
                         <input class="bg-zinc-200 p-1 rounded" type="text">
                     </div>
-                    <h4 class="text-2xl font-semibold text-center my-3">Expences</h4>
-                    <div class="text-1xl font-semibold my-2 ml-4">
-                        <span class="text-right">Food:</span>
-                        <input class="p-1 bg-zinc-200 rounded" type="text">
+                    <h4 class="text-2xl font-semibold my-3">Expenses</h4>
+                    <div class="font-semibold">
+                        <div class="my-2 ml-4">
+                            <span>Food:</span>
+                            <input class="bg-zinc-200 p-1 rounded" type="text">
+                        </div>
+
+                        <div class="my-2 ml-5">
+                            <span>Rent:</span>
+                            <input class="bg-zinc-200 p-1 rounded" type="text">
+                        </div>
+                        <div class="my-2">
+                            <span>Clothes:</span>
+                            <input class="bg-zinc-200 p-1 rounded" type="text">
+                        </div>
+                    </div>
+                    <!-- Calculation Button (Income & Expenses)-->
+                    <button
+                        class="bg-blue-400 text-white font-semibold px-10 py-2 mt-4 mb-2 rounded-md">Calculate</button>
+                    <!-- Error Massages (Income & Expenses)-->
+                    <!--  <div class="my-4">
+                        <p class="notify">❌ Pin Didn't Match, Please try again</p>
+                    </div> -->
+                    <!-- Calculation Results (Income & Expenses)-->
+                    <div class="text-2xl text-center font-semibold">
+                        <h4 class="my-2.5">Total Expenses: <span>5500</span></h4>
+                        <h4 class="my-2.5">Balance: <span>4500</span></h4>
                     </div>
 
-                    <div class="text-1xl font-semibold my-2 ml-5">
-                        <span class="text-right">Rent:</span>
-                        <input class="p-1 bg-zinc-200 rounded" type="text">
-                    </div>
-                    <div class="text-1xl font-semibold my-2">
-                        <span class="text-right">Clothes:</span>
-                        <input class="p-1 bg-zinc-200 rounded" type="text">
-                    </div>
-                    <button
-                        class="text-white bg-blue-400 px-10 py-2 text-1xl font-semibold mt-4 mb-2  rounded-md">Calculate</button>
-                    <div class="my-4">
-                        <p class="notify">❌ Pin Didn't Match, Please try again</p>
-                    </div>
-                    <h4 class="text-2xl font-semibold my-2.5 text-center">Total Expenses: <span>5500</span></h4>
-                    <h4 class="text-2xl font-semibold my-2.5 text-center">Balance: <span>4500</span></h4>
-                    <div class="grid grid-cols-2 ">
-                        <div class="text-1xl font-semibold my-2 flex items-center">
+                    <!-- Saving & Remaining Balance Area -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-semibold my-3">
+                        <div class="flex items-center">
                             <span>Save:</span>
-                            <input class="p-1 bg-zinc-200 rounded w-32 mx-3.5" type="text">
+                            <input class="bg-zinc-200 w-32 p-1 mx-3.5 rounded" type="text">
                         </div>
-                        <div class="text-1xl font-semibold my-3 flex items-center">
+                        <div class="flex items-center">
                             <span>%</span>
-                            <button class="text-white bg-blue-400 p-1 rounded w-32 mx-3.5 font-semibold">Save</button>
+                            <!-- Save Button (Saving & Remaining)-->
+                            <button
+                                class="bg-blue-400 text-white font-semibold w-32 p-1 mx-3.5 rounded-md">Save</button>
                         </div>
                     </div>
-                    <div class="my-4">
+                    <!-- Error Massages (Saving & Remaining)-->
+                    <!-- <div class="my-4">
                         <p class="notify">❌ Pin Didn't Match, Please try again</p>
+                    </div> -->
+                    <!-- Calculation Results (Saving & Remaining)-->
+                    <div class="text-2xl text-center font-semibold">
+                        <h4 class="my-2">Saving Amount: <span>2000</span></h4>
+                        <h4 class="my-2">Remaining Balance: <span>2500</span></h4>
                     </div>
-                    <h4 class="text-2xl font-semibold my-2 text-center">Saving Amount: <span>2000</span></h4>
-                    <h4 class="text-2xl font-semibold my-2 text-center">Remaining Balance: <span>2500</span></h4>
+
                 </div>
             </div>
         </section>
