@@ -55,7 +55,6 @@ function updateBalanceAndExpences() {
     }
     const expensesElement = document.getElementById('total-expenses');
     expensesElement.innerText = totalExpenses;
-
     const balance = income - totalExpenses;
     const balanceElement = document.getElementById('total-balance');
     balanceElement.innerText = balance;
