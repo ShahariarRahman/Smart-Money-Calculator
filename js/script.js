@@ -6,7 +6,7 @@ function getExpenses() {
         let expenseField = document.getElementById(expense + '-expenses');
         let expenseValue = parseFloat(expenseField.value);
         // Type error check
-        if ((isNaN(expenseValue) == false) && (expenseValue > 0)) {
+        if ((isNaN(expenseValue) == false) && (expenseValue >= 0)) {
             totalExpenses = totalExpenses + expenseValue;
         }
         else {
@@ -24,7 +24,7 @@ function getIncome(income) {
     const incomeField = document.getElementById(income);
     const incomeValue = parseFloat(incomeField.value);
     // Type error check
-    if ((isNaN(incomeValue) == false) && (incomeValue > 0)) {
+    if ((isNaN(incomeValue) == false) && (incomeValue >= 0)) {
         incomeField.value = '';
         return incomeValue;
     }
@@ -46,7 +46,7 @@ function updateBalanceAndExpences() {
         document.getElementById('type-error-expences').style.display = 'none';
     }
     // over expenses check
-    if (totalExpenses > income) {
+    if (totalExpenses >= income) {
         document.getElementById('over-cost-expences').style.display = 'block';
         return;
     }
@@ -99,7 +99,7 @@ function updateSaveAndRemining() {
         document.getElementById('over-cost-saving').style.display = 'none';
     }
     // Type error check
-    if ((isNaN(savingPercentage) == false) && (savingPercentage > 0)) {
+    if ((isNaN(savingPercentage) == false) && (savingPercentage >= 0)) {
         document.getElementById('type-error-saving').style.display = 'none';
     }
     else {
